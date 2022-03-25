@@ -6,7 +6,7 @@
 @model PierresTreats.Models.PierresTreatsContext
 
 <div class="row justify-content-md-center text-center">
-  <div class="col-8 recipe-container">
+  <div class="col-6">
     <h2>Treats</h2>
 
     @if (@Model.Treats.ToList().Count == 0)
@@ -20,7 +20,7 @@
     }
   </div>
 
-  <div class="col-3 col-sm tag-box">
+  <div class="col-6">
     <h2>Flavors</h2>
 
     @if (@Model.Flavors.ToList().Count == 0)

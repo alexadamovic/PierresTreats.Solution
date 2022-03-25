@@ -22,3 +22,9 @@ header {
   height: 2.5rem;
   border-top: solid;
 }
+
+#sidebar {
+  float: left;
+  border: solid;
+  padding: 2rem;
+}
