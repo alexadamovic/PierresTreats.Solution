@@ -1,10 +1,9 @@
 @{
   Layout = "_Layout";
 }
+
 @using System.Security.Claims
 
-<h2>Authentication with Identity</h2>
-<hr />
 @if (User.Identity.IsAuthenticated)
 {
   <p>Welcome @User.Identity.Name!</p>
