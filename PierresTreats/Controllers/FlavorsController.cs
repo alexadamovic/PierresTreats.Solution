@@ -42,7 +42,7 @@ namespace PierresTreats.Controllers
       Flavor.User = currentUser;
       _db.Flavors.Add(Flavor);
       _db.SaveChanges();
-      return RedirectToAction("Index", "Home");
+      return RedirectToAction("Index");
     }
 
     [AllowAnonymous]
@@ -70,7 +70,7 @@ namespace PierresTreats.Controllers
       _db.FlavorTreat.Add(new FlavorTreat() { TreatId = TreatId, FlavorId = Flavor.FlavorId });
       }
       _db.SaveChanges();
-      return RedirectToAction("Index", "Home");
+      return RedirectToAction("Index");
     }
 
     [HttpPost]
@@ -79,7 +79,7 @@ namespace PierresTreats.Controllers
       var joinEntry = _db.FlavorTreat.FirstOrDefault(entry => entry.FlavorTreatId == joinId);
       _db.FlavorTreat.Remove(joinEntry);
       _db.SaveChanges();
-      return RedirectToAction("Index", "Home");
+      return RedirectToAction("Index");
     }
     public ActionResult Delete(int id)
     {
@@ -93,7 +93,7 @@ namespace PierresTreats.Controllers
       var thisFlavor = _db.Flavors.FirstOrDefault(Flavor => Flavor.FlavorId == id);
       _db.Flavors.Remove(thisFlavor);
       _db.SaveChanges();
-      return RedirectToAction("Index", "Home");
+      return RedirectToAction("Index");
     }
     public ActionResult Edit(int id)
     {
@@ -106,7 +106,7 @@ namespace PierresTreats.Controllers
     {
       _db.Entry(Flavor).State = EntityState.Modified;
       _db.SaveChanges();
-      return RedirectToAction("Index", "Home");
+      return RedirectToAction("Index");
     }
   }
 }
